@@ -18,15 +18,15 @@ export default function SignIn() {
         e.preventDefault();
         var regex = "^(?:|[^a-zA-Z0-9]*)$";
         if (userInputData.userName == "" && userInputData.password == "") {
-            window.alert("Please Fill all the details before submitting");
+            alert("Please Fill all the details before submitting");
         } else if (userInputData.userName == "") {
-            window.alert("Please Fill user name before submitting");
+            alert("Please Fill user name before submitting");
         } else if (userInputData.password == "") {
-            window.alert("Please Fill Psssword before submitting");
+            alert("Please Fill Psssword before submitting");
         } else if (userInputData.userName.match(regex) || userInputData.password.match(regex)) {
-            window.alert("Sorry! That's not a valid Input");
+            alert("Sorry! That's not a valid Input");
         } else {
-            window.alert("Logged in successfully");
+            alert("Logged in successfully");
         }
     }
 

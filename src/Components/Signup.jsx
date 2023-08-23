@@ -20,15 +20,15 @@ export default function Signup() {
         // For Phone number check
         var regex = "^[0-9]+$";
         if (userInputData.userName == "" || userInputData.email == "" || userInputData.password == "" || userInputData.confirmPasword == "" || userInputData.phoneNumber == "") {
-            window.alert("Please Fill all the details before submitting");
+            alert("Please Fill all the details before submitting");
         } else if (userInputData.password != userInputData.confirmPasword) {
-            window.alert("Password does not match");
+            alert("Password does not match");
         } else if (userInputData.phoneNumber.length != 10) {
-            window.alert("Phone Number must contain at least ten phone numbers");
+            alert("Phone Number must contain at least ten phone numbers");
         } else if (!userInputData.phoneNumber.match(regex)) {
-            window.alert("Please enter a valid phone number");
+            alert("Please enter a valid phone number");
         } else {
-            window.alert("Sign up Successfully Completed");
+            alert("Sign up Successfully Completed");
         }
     }
     return (
