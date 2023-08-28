@@ -8,6 +8,7 @@ export default function SignIn() {
         password: "",
     });
 
+    // This will handle all the input data and store it in an object
     const handleInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
