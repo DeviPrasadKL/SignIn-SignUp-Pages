@@ -11,3 +11,5 @@ Currently, two official plugins are available:
   1) Clone the project or Download the zip file
   2) Use command "npm install" or "npm i"
   3) Use command "npm run dev" to start the app in local.
+
+This is a simple project with validations for the required fields.
