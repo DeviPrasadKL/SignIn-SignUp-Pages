@@ -42,6 +42,12 @@ export default function Signup() {
                 <input type="password" placeholder="Confirm password" className="form--input" name="confirmPasword" value={userInputData.confirmPasword} onChange={handleInput} />
                 <input type="tel" placeholder="Contact Number" className="form--input" maxLength="10" name="phoneNumber" value={userInputData.phoneNumber} onChange={handleInput} />
 
+                <div className='buttons-div'>
+                    <button className="form--submit" onClick={handleSubmit}>
+                        Save & Verify
+                    </button>
+                </div>
+
                 {/* <div className='buttons-div'>
                     <NavLink to="/" style={{ width: "100%" }}>
                         <button className="form--submit">

@@ -84,16 +84,21 @@
 }
 
 .buttons-div{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+}
+
+.container{
+  margin-left: 30%;
 }
 
 .toggle-outer{
-  background-color: grey;
+  position: relative;
   width: 18rem;
   height: 2.5rem;
-  margin-left: 39%;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 9px #24d3ff3c;
 }
 
 .toggle-btn{
@@ -101,4 +106,16 @@
   position: relative;
   width: 50%;
   height: 100%;
+  background: transparent;
+  font-weight: 800;
+  transition: .5s;
+}
+#btn{
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, #26deffb6, #b6edf5);
+  transition: .5s;
+  border-radius: 30px;
 }

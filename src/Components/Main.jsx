@@ -5,7 +5,7 @@ import Signup from './Signup';
 export default function Main() {
     const [flag, setFlag] = useState(true);
 
-    let handleToggle = ()=>{
+    let handleToggle = () => {
         setFlag(!flag);
     }
 
@@ -13,11 +13,14 @@ export default function Main() {
 
     return (
         <div>
-            <div className='toggle-outer'>
-                <button type="button" style={{backgroundColor: flag ? 'aqua' : 'none'}} className='toggle-btn' onClick={handleToggle} >Sign In</button>
-                <button type="button" style={{backgroundColor: flag ? 'none' : 'aqua'}} className='toggle-btn' onClick={handleToggle} >Sign Up</button>
+            <div className='container'>
+                <div className='toggle-outer'>
+                    <div id="btn" style={{ left: flag ? '0%' : '50%' }} ></div>
+                    <button type="button" className='toggle-btn' onClick={handleToggle} style={{ color: flag ? 'white' : 'black' }} >Sign In</button>
+                    <button type="button" className='toggle-btn' onClick={handleToggle} style={{ color: flag ? 'black' : 'white' }} >Sign Up</button>
+                </div>
             </div>
-            <Component/>
+            <Component />
         </div>
     );
 }

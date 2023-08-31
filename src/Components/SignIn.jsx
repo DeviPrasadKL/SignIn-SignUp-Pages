@@ -34,7 +34,7 @@ export default function SignIn() {
     return (
         <div className='outerdiv'>
             <form className="form">
-                <span className="signup">Login</span>
+                <span className="signup">Sign In</span>
                 <input type="name" placeholder="User name" className="form--input" name="userName" value={userInputData.userName} onChange={handleInput} />
                 <input type="password" placeholder="Password" className="form--input" name="password" value={userInputData.password} onChange={handleInput} />
                 <div className="form--marketing">
@@ -45,6 +45,12 @@ export default function SignIn() {
                         </label>
                     </div>
                     <a href="">Forgot Password</a>
+                </div>
+
+                <div className='buttons-div'>
+                    <button className="form--submit" onClick={handleFormSubmit}>
+                        Login
+                    </button>
                 </div>
 
                 {/* <div className='buttons-div'>
