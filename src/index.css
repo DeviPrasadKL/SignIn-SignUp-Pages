@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 90vh;
 }
 @media (max-width: 450px) {
@@ -90,7 +91,7 @@
 }
 
 .container{
-  margin-left: 30%;
+  margin-left: 40%;
 }
 
 .toggle-outer{
@@ -118,4 +119,16 @@
   background: linear-gradient(to right, #26deffb6, #b6edf5);
   transition: .5s;
   border-radius: 30px;
+}
+
+.ContentBox{
+  display: flex;
+  margin-left: 28%;
+  width: 39rem;
+  height: 45rem;
+  overflow: hidden;
+}
+.formContent{
+  position: relative;
+  width: 100%;
 }

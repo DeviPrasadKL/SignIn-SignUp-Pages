@@ -20,7 +20,11 @@ export default function Main() {
                     <button type="button" className='toggle-btn' onClick={handleToggle} style={{ color: flag ? 'black' : 'white' }} >Sign Up</button>
                 </div>
             </div>
-            <Component />
+            <div className='ContentBox'>
+                <div className='formContent'>
+                    <Component />
+                </div>
+            </div>
         </div>
     );
 }
