@@ -69,17 +69,18 @@
 .form--submit {
   width: 50%;
   padding: 0.625em;
+  font-weight: 800;
   border-radius: 5px;
   color: white;
   background-color: rgb(65, 137, 209);
-  border: 1px dashed #639;
+  border: 1px solid #639;
   cursor: pointer;
 }
 
 .form--submit:hover {
   color: rgb(65, 137, 209);
   background-color: white;
-  border: 1px dashed rgb(65, 137, 209);
+  border: 1px solid rgb(65, 137, 209);
   cursor: pointer;
   transition: 0.5s;
 }
