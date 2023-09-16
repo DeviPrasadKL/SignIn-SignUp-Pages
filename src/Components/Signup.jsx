@@ -38,9 +38,9 @@ export default function Signup() {
                 <span className="signup">Sign Up</span>
                 <input type="username" placeholder="User name" className="form--input" name="userName" value={userInputData.userName} onChange={handleInput} />
                 <input type="email" placeholder="Email address" className="form--input" name="email" value={userInputData.email} onChange={handleInput} />
+                <input type="tel" placeholder="Contact Number" className="form--input" maxLength="10" name="phoneNumber" value={userInputData.phoneNumber} onChange={handleInput} />
                 <input type="password" placeholder="Password" className="form--input" name="password" value={userInputData.password} onChange={handleInput} />
                 <input type="password" placeholder="Confirm password" className="form--input" name="confirmPasword" value={userInputData.confirmPasword} onChange={handleInput} />
-                <input type="tel" placeholder="Contact Number" className="form--input" maxLength="10" name="phoneNumber" value={userInputData.phoneNumber} onChange={handleInput} />
 
                 <div className='buttons-div'>
                     <button className="form--submit" onClick={handleSubmit}>
