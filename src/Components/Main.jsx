@@ -12,7 +12,8 @@ export default function Main() {
     let Component = flag ? SignIn : Signup;
 
     return (
-        <div>
+        <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <div className='outerContainer'>
             <div className='container'>
                 <div className='toggle-outer'>
                     <div id="btn" style={{ left: flag ? '0%' : '50%' }} ></div>
@@ -25,6 +26,7 @@ export default function Main() {
                     <Component />
                 </div>
             </div>
+        </div>
         </div>
     );
 }
