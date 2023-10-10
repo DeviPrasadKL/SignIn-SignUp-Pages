@@ -53,7 +53,7 @@ export default function SignIn() {
                     </button>
                 </div>
 
-                {/* <div className='buttons-div'>
+                {/* 
                     <NavLink to="/" style={{ width: "100%" }}>
                         <button className="form--submit" onClick={handleFormSubmit}>
                             Login
