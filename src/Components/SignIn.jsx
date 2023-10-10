@@ -54,7 +54,6 @@ export default function SignIn() {
                 </div>
 
                 {/*
-                            Sign up
                         </button>
                     </NavLink>
                 </div> */}
