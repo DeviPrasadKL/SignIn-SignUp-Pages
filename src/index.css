@@ -8,7 +8,7 @@
 .outerContainer {
   width: 30rem;
   height: 37rem;
-  background-color: white;
+  background-color: rgba(246, 246, 246, 0.767);
   padding: 3.125em;
   border-radius: 10px;
   display: flex;
@@ -48,6 +48,7 @@
   padding: 0.8em;
   font-family: 'Inter', sans-serif;
   outline: none;
+  background-color: rgb(245, 245, 245);
 }
 
 .form--input:focus {
