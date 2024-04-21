@@ -2,22 +2,13 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Signup() {
-    const [userInputData, setUserInputData] = useState({
-        userName: "",
-        email: "",
-        password: "",
-        confirmPasword: "",
-        phoneNumber: ""
-    });
-
-    // This will handle all the input data and store it in an object
-    const handleInput = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setUserInputData({ ...userInputData, [name]: value });
-    }
+    
     const handleSubmit = (e) => {
         e.preventDefault();
+        let form = new FormData(e.target);
+        let userInputData = Object.fromEntries(form.entries());
+        console.log("Obj = ", userInputData);
+
         // For Phone number check
         var regex = "^[0-9]+$";
         if (userInputData.userName == "" || userInputData.email == "" || userInputData.password == "" || userInputData.confirmPasword == "" || userInputData.phoneNumber == "") {
@@ -32,36 +23,23 @@ export default function Signup() {
             alert("Sign up Successfully Completed");
         }
     }
+
     return (
         <div className='outerdiv'>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <span className="signup">Sign Up</span>
-                <input type="username" placeholder="User name" className="form--input" name="userName" value={userInputData.userName} onChange={handleInput} />
-                <input type="email" placeholder="Email address" className="form--input" name="email" value={userInputData.email} onChange={handleInput} />
-                <input type="tel" placeholder="Contact Number" className="form--input" maxLength="10" name="phoneNumber" value={userInputData.phoneNumber} onChange={handleInput} />
-                <input type="password" placeholder="Password" className="form--input" name="password" value={userInputData.password} onChange={handleInput} />
-                <input type="password" placeholder="Confirm password" className="form--input" name="confirmPasword" value={userInputData.confirmPasword} onChange={handleInput} />
+                <input type="username" placeholder="User name" className="form--input" name="userName"  />
+                <input type="email" placeholder="Email address" className="form--input" name="email"  />
+                <input type="tel" placeholder="Contact Number" className="form--input" maxLength="10" name="phoneNumber"  />
+                <input type="password" placeholder="Password" className="form--input" name="password" />
+                <input type="password" placeholder="Confirm password" className="form--input" name="confirmPasword" />
 
                 <div className='buttons-div'>
-                    <button className="form--submit" onClick={handleSubmit}>
+                    <button type='submit' className="form--submit">
                         Save & Verify
                     </button>
                 </div>
-
-                {/* <div className='buttons-div'>
-                    <NavLink to="/" style={{ width: "100%" }}>
-                        <button className="form--submit">
-                            Back
-                        </button>
-                    </NavLink>
-                    <NavLink to="/signup" style={{ width: "100%" }}>
-                        <button className="form--submit" onClick={handleSubmit}>
-                            Save & Verify
-                        </button>
-                    </NavLink>
-                </div> */}
             </form>
-
         </div>
     );
 }
